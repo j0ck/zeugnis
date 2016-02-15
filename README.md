@@ -1,2 +1,2 @@
 # zeugnis
-Zeugnis App 
+Zeugnis App v1.0
