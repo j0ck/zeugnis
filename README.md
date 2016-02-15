@@ -1,2 +1,2 @@
 # zeugnis
-Zeugnis App v1.0
+Zeugnis App PRESTUDY
