@@ -1,41 +1,20 @@
-var myApp = angular.module('App', []);
+var app = angular.module('Zeugnis', []);
 
-myApp.controller('AppController', ['$scope', function($inhalt) {
+app.controller('BoilerplateController', function() {
+    this.boilerplates = $boilerplates;
     
-    
-    $inhalt.nummer1 = function() {
-        $inhalt.spice1 = 'Nummer 1';
-        $inhalt.clear1 = function() {
-            $inhalt.spice1 = " ";                  
-        }               
+    this.replaceName = function(text, name) {
+        return text.replace("NAME", name);
     };
 
-    $inhalt.nummer2 = function() {
-        $inhalt.spice1 = 'Nummer 2';
-        $inhalt.clear1 = function() {
-            $inhalt.spice1 = " ";
+    this.categories = function() {
+        res = [];
+        for(b of this.boilerplates) {
+            if(res.indexOf(b.category) === -1) {
+                res.push(b.category);
+            }     
         }
-        // $inhalt.vorschau = $inhalt.spice1;   
+        return res;
     };
-    
-     $inhalt.nummer3 = function() {
-        $inhalt.spice2 = 'Nummer 3';
-        $inhalt.clear2 = function() {
-            $inhalt.spice2 = " ";
-        }
-    };
-
-    $inhalt.nummer4 = function() {
-        $inhalt.spice2 = 'Nummer 4';
-        $inhalt.clear2 = function() {
-            $inhalt.spice2 = " ";
-        }
-    };
-    
-    $inhalt.clearAll = function() {
-        $inhalt.spice1 = " ";
-        $inhalt.spice2 = " ";
-    }
-    
-}]);
+});
 
